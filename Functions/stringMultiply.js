@@ -25,7 +25,7 @@ function strMultiply(str, times) {
 console.log(nameList);
 }
 
-strMultiply('abc', 3)
+strMultiply('abc', 10)
 
 
 

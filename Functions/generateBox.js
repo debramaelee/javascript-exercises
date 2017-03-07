@@ -10,13 +10,30 @@ function range(min, max) {
   return arr;
 }
 
-
-function makeBox(width, height) {
-	var arr = range(0, height)
-	var repeated = arr.map(function(){
-		console.log('*');
+function strMultiply(str, times) {
+	var arr = range(0, times)
+	var repeated = arr.map(function() {
+		return str;
 	});
+	//join string
+	var nameList = repeated.reduce(function(currentValue, name) {
+		return currentValue + name;
+	}, '');
+console.log(nameList);
 }
 
-makeBox(4, 10);
+function generateBox(height, width) {
+	return strMultiply(
+		strMultiply('*', width) + '\n', height);
+
+
+// alt solution
+// function makeBox(width, height) {
+// 	var arr = range(0, height)
+// 	var repeated = arr.map(function(){
+// 		console.log('*');
+// 	});
+// }
+
+generateBox(4, 10);
 
